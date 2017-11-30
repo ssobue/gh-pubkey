@@ -1,5 +1,7 @@
 # Print Public Key Tool of Github for Open SSH Server
 
+* Build Status: [![CircleCI](https://circleci.com/gh/ssobue/github_public_key/tree/master.svg?style=svg)](https://circleci.com/gh/ssobue/github_public_key/tree/master)
+
 Build and Install the Binaries from Source
 ---
  
