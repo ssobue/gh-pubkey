@@ -13,4 +13,4 @@ jobs:
       - run: go get -v -t -d github.com/google/go-github/github
       - run: go build
       - store_artifacts:
-          path: ./gh-pubkey
+          path: ./
