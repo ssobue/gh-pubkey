@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: circleci/golang:1.9
       
-    working_directory: /go/src/github.com/ssobue/github_public_key
+    working_directory: /go/src/github.com/ssobue/gh-pubkey
     steps:
       - checkout
 
