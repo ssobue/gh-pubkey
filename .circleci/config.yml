@@ -14,4 +14,4 @@ jobs:
       - run: go build
       - store_artifacts:
           path: ./gh-pubkey
-          destination: .
+          destination: gh-pubkey
