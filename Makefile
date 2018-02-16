@@ -14,7 +14,7 @@ clean:
 
 .PHONY: get
 get:
-	@for pack in $(PACKS); do go get $$pack; done
+	@for pack in $(PACKS); do go get -u $$pack; done
 
 .PHONY: cross-build
 cross-build: get darwin-amd64 linux-amd64 linux-arm

@@ -7,13 +7,17 @@ Build and Install the Binaries from Source
  
 * get dependencies
 ```bash
-$ go get -u golang.org/x/oauth2
-$ go get -u github.com/google/go-github/github
+$ make get
 ```
 
 * build
 ```bash
-$ go build
+$ make cross-build
+```
+
+* packaging
+```bash
+$ make dist
 ```
 
 * set AuthorizedKeysCommand to Open SSH Server Configure File(`sshd_config`)
