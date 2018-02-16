@@ -11,5 +11,4 @@ jobs:
 
       - run: make dist
       - store_artifacts:
-          path: ./dist/*
-          destination: .
+          path: ./dist/
