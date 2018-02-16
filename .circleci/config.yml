@@ -9,9 +9,7 @@ jobs:
     steps:
       - checkout
 
-      - run: go get -v -t -d golang.org/x/oauth2
-      - run: go get -v -t -d github.com/google/go-github/github
-      - run: go build
+      - run: make dist
       - store_artifacts:
-          path: ./gh-pubkey
-          destination: gh-pubkey
+          path: ./dist/*
+          destination: .
