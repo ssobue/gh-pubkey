@@ -4,6 +4,7 @@ import (
 	"os"
 	"fmt"
 	"context"
+	"io/ioutil"
 	"golang.org/x/oauth2"
 	"github.com/google/go-github/github"
 )
@@ -12,8 +13,12 @@ func main() {
 	// Get Token from System Environment
 	token := os.Getenv("GITHUB_TOKEN")
 	if token == "" {
-		fmt.Fprint(os.Stderr,"NO TOKEN\n")
-		os.Exit(1)
+		dat, err := ioutil.ReadFile("/etc/github-token")
+		if err != nil {
+			fmt.Fprint(os.Stderr,"NO TOKEN\n")
+			os.Exit(1)
+		}
+		token = string(dat)
 	}
 
 	// Get User Name from Command Line Argument
