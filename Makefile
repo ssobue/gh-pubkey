@@ -10,11 +10,11 @@ PACKS   := golang.org/x/oauth2 github.com/google/go-github/github
 
 .PHONY: clean
 clean:
-	@rm -fvr ./dist
+	rm -fvr ./dist
 
 .PHONY: get
 get:
-	@for pack in $(PACKS); do go get -u $$pack; done
+	for pack in $(PACKS); do go get -u $$pack; done
 
 .PHONY: cross-build
 cross-build: get darwin-amd64 linux-amd64 linux-arm
@@ -33,4 +33,4 @@ linux-arm:
 
 .PHONY: dist
 dist: cross-build
-	@cd dist && find * -type d -exec tar -zcf $(NAME)-$(VERSION)-{}.tar.gz {} \; && cd ..
+	cd dist && find * -type d -exec tar -zcf $(NAME)-$(VERSION)-{}.tar.gz {} \; && cd ..
