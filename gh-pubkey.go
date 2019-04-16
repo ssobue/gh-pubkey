@@ -1,12 +1,12 @@
 package main
 
 import (
-	"os"
-	"fmt"
 	"context"
-	"io/ioutil"
-	"golang.org/x/oauth2"
+	"fmt"
 	"github.com/google/go-github/github"
+	"golang.org/x/oauth2"
+	"io/ioutil"
+	"os"
 )
 
 func main() {
@@ -15,7 +15,7 @@ func main() {
 	if token == "" {
 		dat, err := ioutil.ReadFile("/etc/github-token")
 		if err != nil {
-			fmt.Fprint(os.Stderr,"NO TOKEN\n")
+			_, _ = fmt.Fprint(os.Stderr, "NO TOKEN\n")
 			os.Exit(1)
 		}
 		token = string(dat)
@@ -23,7 +23,7 @@ func main() {
 
 	// Get User Name from Command Line Argument
 	if len(os.Args) == 1 {
-		fmt.Fprint(os.Stderr,"NO USER NAME\n")
+		_, _ = fmt.Fprint(os.Stderr, "NO USER NAME\n")
 		os.Exit(2)
 	}
 	user := os.Args[1]
