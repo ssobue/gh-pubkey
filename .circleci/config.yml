@@ -1,9 +1,9 @@
-# Golang CircleCI 2.0 configuration file
-version: 2
+version: 2.1
+
 jobs:
   build:
     docker:
-      - image: circleci/golang:1.12
+      - image: cimg/go:1.19
       
     working_directory: /go/src/github.com/ssobue/gh-pubkey
     steps:
