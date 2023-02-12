@@ -1,12 +1,12 @@
 # Constants
 NAME     := gh-pubkey
-VERSION  := v0.1.0
+VERSION  := v0.2.0
 REVISION := $(shell git rev-parse --short HEAD)
 
 SRCS    := $(shell find . -type f -name '*.go')
 LDFLAGS := -ldflags="-s -w -X \"main.Version=$(VERSION)\" -X \"main.Revision=$(REVISION)\" -extldflags \"-static\""
 
-PACKS   := golang.org/x/oauth2 github.com/google/go-github/github
+PACKS   := golang.org/x/oauth2 github.com/google/go-github/v50
 
 .PHONY: clean
 clean:
