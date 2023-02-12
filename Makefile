@@ -6,7 +6,7 @@ REVISION := $(shell git rev-parse --short HEAD)
 SRCS    := $(shell find . -type f -name '*.go')
 LDFLAGS := -ldflags="-s -w -X \"main.Version=$(VERSION)\" -X \"main.Revision=$(REVISION)\" -extldflags \"-static\""
 
-PACKS   := golang.org/x/oauth2 github.com/google/go-github/v50
+PACKS   := github.com/google/go-github/v50@v50.0.0 golang.org/x/oauth2@v0.5.0 golang.org/x/crypto@v0.6.0 github.com/google/go-querystring@v1.1.0
 
 .PHONY: clean
 clean:
