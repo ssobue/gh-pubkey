@@ -1,14 +1,21 @@
 version: 2.1
 
+orbs:
+  go: circleci/go@1.11.0
+
 jobs:
   build:
-    docker:
-      - image: cimg/go:1.19
-      
+    executor:
+      name: go/default
+      tag: '1.22.6'
     steps:
       - checkout
-
       - run: make dist
       - store_artifacts:
           path: ./dist/
           destination: artifacts
+
+workflows:
+  main:
+    jobs:
+      - build
