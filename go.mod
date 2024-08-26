@@ -12,5 +12,7 @@ require (
 	github.com/cloudflare/circl v1.3.7 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	golang.org/x/crypto v0.26.0 // indirect
+	golang.org/x/net v0.23.0 // indirect
 	golang.org/x/sys v0.23.0 // indirect
+	google.golang.org/protobuf v1.34.2 // indirect
 )
