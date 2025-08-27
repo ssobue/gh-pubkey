@@ -7,6 +7,9 @@ require (
 	golang.org/x/oauth2 v0.30.0
 )
 
+// Fixes for CVE-2024-24786
+replace google.golang.org/protobuf => google.golang.org/protobuf v1.36.8
+
 require (
 	github.com/ProtonMail/go-crypto v1.3.0 // indirect
 	github.com/cloudflare/circl v1.6.1 // indirect
