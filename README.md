@@ -1,6 +1,6 @@
 # Print Public Key Tool of Github for Open SSH Server
 
-* Build Status: [![CircleCI](https://dl.circleci.com/status-badge/img/gh/ssobue/gh-pubkey/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/ssobue/gh-pubkey/tree/master)
+* Build Status: [![Go](https://github.com/ssobue/gh-pubkey/actions/workflows/go.yml/badge.svg?branch=master)](https://github.com/ssobue/gh-pubkey/actions/workflows/go.yml)
 
 Build and Install the Binaries from Source
 ---
