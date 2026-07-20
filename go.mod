@@ -1,6 +1,6 @@
 module github.com/ssobue/gh-pubkey
 
-go 1.25.5
+go 1.26.5
 
 require (
 	github.com/google/go-github/v50 v50.2.0
