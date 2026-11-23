@@ -1,26 +1,23 @@
-# To combine open update PRs, run .github/scripts/batch-dependabot.sh --dry-run.
 version: 2
+multi-ecosystem-groups:
+  dependencies:
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:30"
+      timezone: "Asia/Tokyo"
+    labels:
+      - "dependencies"
+
 updates:
   # GitHub Actions versions
   - package-ecosystem: "github-actions"
     directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "04:30"
-      timezone: "Asia/Tokyo"
-    open-pull-requests-limit: 5
-    labels:
-      - "dependencies"
+    patterns: ["*"]
+    multi-ecosystem-group: "dependencies"
 
   # Go Modules
   - package-ecosystem: "gomod"
     directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "04:30"
-      timezone: "Asia/Tokyo"
-    open-pull-requests-limit: 5
-    labels:
-      - "dependencies"
+    patterns: ["*"]
+    multi-ecosystem-group: "dependencies"
